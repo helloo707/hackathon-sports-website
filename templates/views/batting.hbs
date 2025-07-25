@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #cards-container{
+    
+    height: 80vh;
+    display: flex;
+    align-items: top;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    gap: 70px;
+    position: relative;
+    z-index: 10;
+    top:50px;
+}
+.card{
+    height: 80%;
+    width: 30%;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    transition: all ease 0.6s;
+    margin: 20vh auto;
+}
+#card1{
+    background-image: url('IMG/day1.jpg');
+}
+#card2{
+    background-image: url('IMG/day2.jpeg');
+}
+#card3{
+    background-image: url('IMG/day3.jpg');
+}
+#card4{
+    background-image: url('IMG/day4.jpeg');
+}
+#card5{
+    background-image: url('IMG/day5.jpg');
+}
+#card6{
+    background-image: url('IMG/day6.jpg');
+}
+.over{
+    height: 100%;
+    width: 100%;
+    background-color: #95C11E;
+    padding-left:2px;
+    padding-top: 16px;
+    opacity: 0;
+    transition: all ease 0.6s;
+}
+.over h4{
+    color: black;
+    font-size: 30px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    margin-bottom: 20px;
+    font-weight: 800;
+
+}
+.over p{
+    color: black;
+    font-size: 18px;
+}
+.card:hover .over{
+    opacity: 1;
+}
+
+#cursor{
+    height: 20px;
+    width: 20px;
+    background-color: #95C11E;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 99;
+}
+
+#nav{
+    height: 145px;
+    width: 100%;
+    display: flex;
+    padding: 0 150px;
+    gap: 50px;
+    position:fixed;
+    justify-content: flex-start;
+    z-index: 99;
+    background-color: rgba(0, 0, 0, 0.37);
+}
+#nav img{
+    height: 75px;
+}
+
+#nav h4{
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+#footer{
+    height: 40vh;
+    width: 100%;
+    background:linear-gradient(to left bottom,#b4f502,#92c605);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 150px;
+    padding: 0 100px;
+}
+#footer>img{
+    position: absolute;
+    left: 0;
+    height: 40%;
+    z-index: 0;
+}
+#scroller{
+    
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 10;
+
+}
+#scroller::-webkit-scrollbar{
+    display: none;
+
+}
+#scroller-in{
+    display: inline-block;
+    white-space: nowrap;
+}
+#scroller-in{
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: scroll;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+#scroller h4{
+    display: inline-block;
+    font-size: 140px;
+    font-weight: 800;
+    font-family: gilroy;
+    margin-right: 10px;
+    transition: all linear 0.5s;
+    color: transparent;
+    -webkit-text-stroke: 2px #95C11E;
+}
+#scroller h4:hover{
+    color: #95C11E;
+}
+@keyframes scroll{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+a{
+text-decoration: none;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    align-items: center;
+}
+html,body{
+    height: 100;
+    width: 100;
+}
+#cursor{
+    height: 20px;
+    width: 20px;
+    background-color: #95C11E;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 99;
+}
+#cursor-blur{
+    height: 400px;
+    width: 400px;
+    background-color: #96c11e33;
+    border-radius: 50%;
+    position: fixed;
+    filter: blur(50px);
+    z-index: 9;
+}
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="nav">
+
+        <img src="https://www.jetpunk.com/img/user-photo-library/3a/3a1b007d7b-450.png">
+
+        <h4><a href="/">Home</a></h4>
+        <h4><a href="sports">Sports</a></h4>
+        <h4><a href="diet">Diet</a></h4>
+        <h4><a href="login">Login</a></h4>
+    
+    </div>
+     <div id="cursor"></div>
+    <div id="main">
+    <div id="cards-container">
+    <div class="card" id="card1">
+            <div class="over">
+                <h4>Day 1: Technique and <br>Footwork</h4>
+                <p>
+                    <li>Warm-up: Start with a 10-15 minute dynamic warm-up, including jogging, high knees, and stretching.</li>
+                    <li>Batting Stance: Work on your batting stance and grip. Make sure your stance is balanced and comfortable.</li>
+                    <li>Basic Shots: Practice the straight drive, cover drive, and forward defense. Focus on your footwork and balance.</li>
+                    <li>Throwdowns: Have a partner or coach deliver throwdowns with a tennis ball to help you get your timing right.</li>
+                
+                
+                </p>
+            </div>
+        </div>
+        <div class="card" id="card2">
+            <div class="over">
+                <h4>Day 2: Playing Spin<br>Bowling</h4>
+                <p>
+                    <li>Warm-up: Repeat the dynamic warm-up from Day 1.</li>
+                    <li>Facing Spinners: Have a spinner or a coach bowl spin deliveries to you. Focus on reading the line and length early</li>
+                    <li>Facing Spinners: Have a spinner or a coach bowl spin deliveries to you. Focus on reading the line and length early</li>
+                    <li>Running Between Wickets: Practice calling and running between the wickets with a partner.</li>
+                </p>
+            </div>
+        </div>
+        <div class="card" id="card3">
+            <div class="over">
+                <h4>Day 3: Power Hitting and<br>Scoring Shots</h4>
+                <p>
+                    <li>Warm-up: Same warm-up as Day 1.</li>
+                    <li>Power Hitting: Work on lofted shots like the lofted drive and lofted cut. Focus on timing and power.</li>
+                    <li>Scoring Shots: Practice shots like the flick, leg glance, and paddle sweep for quick singles and boundaries.</li>
+                    <li>Throwdowns: Continue with throwdowns to improve your shot selection and execution.</li>
+                    
+                </p><br>
+            </div>
+        </div>
+    </div>
+    <div id="cards-container">
+        <div class="card" id="card4">
+            <div class="over">
+                <h4>Day 4: Building Stamina<br>and Endurance</h4>
+                <p>
+                    <li>Warm-up: Dynamic warm-up.</li>
+                    <li>Long Net Session: Spend a longer time in the nets facing bowlers. This will help improve your endurance and concentration.</li>
+                    <li>Running Drills: Incorporate shuttle runs and sprints to improve your fitness and agility.</li>
+                </p>
+            </div>
+        </div>
+        <div class="card" id="card5">
+            <div class="over">
+                <h4>Day 5: Mental Toughness<br>and Visualization</h4>
+                <p>
+                    <li>Warm-up: Dynamic warm-up.</li>
+                    <li>Mental Practice: Spend time visualizing different scenarios and shots. Work on your mental toughness and concentration.</li>
+                    <li>Scenario Drills: Have a coach simulate different game situations, like chasing a target or building an innings.</li>
+                </p>
+            </div>
+        </div>
+        <div class="card" id="card6">
+            <div class="over">
+                <h4>Day 6: Match Simulations<br>and Review</h4>
+                <p>
+                    <li>Warm-up: Dynamic warm-up.</li>
+                    <li>Match Simulation: Play a practice match or scenario-based game with teammates or friends. Apply what you've learned during the week.</li>
+                    <li>Review: After the match, review your performance and identify areas for improvement. Discuss with your coach or teammates.</li>
+                </p>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div id="footer">
+            <img src="https://www.jetpunk.com/img/user-photo-library/3a/3a1b007d7b-450.png">
+            <div id="f1">
+                <img src="https://eiwgew27fhz.exactdn.com/wp-content/themes/puttosaurus/img/dots-side.svg" >
+            </div>
+            <div id="f2">
+                <h3>Sports</h3>
+                <h3>Fitness</h3>
+                <h3>Diet</h3>
+            </div>
+            <div id="f3">
+                <h3>Contact Us</h3>
+                
+            </div>
+            <div id="f4">
+                <h4>
+                    Vidyalankar Polytechnic <br>
+                    Wadala <br>
+                    Mumbai <br>
+                    
+                </h4>
+            </div>
+        </div>
+     <script>
+        var crsr = document.querySelector("#cursor")
+var blur = document.querySelector("#cursor-blur")
+document.addEventListener("mousemove",function(dets){
+crsr.style.left = dets.x+"px"
+crsr.style.top = dets.y+"px"
+blur.style.left = dets.x-250+"px"
+blur.style.top = dets.y-250+"px"
+})
+
+
+var h4all = document.querySelectorAll("#nav h4")
+h4all.forEach(function(elem){
+    elem.addEventListener("mouseenter",function(){
+        crsr.style.scale=3
+        crsr.style.border="1px solid #fff"
+        crsr.style.backgroundColor="transparent"
+    })
+    
+        elem.addEventListener("mouseleave",function(){
+            crsr.style.scale=1
+            crsr.style.border="0px solid #95C11E"
+            crsr.style.backgroundColor="#95C11E"
+        })
+    
+    })
+
+gsap.to("#nav",{
+    backgroundColor:"#000",
+    height:"80px",
+    duration: 0.5,
+    scrollTrigger:{
+        trigger:"#nav",
+        scroller:"body",
+        markers:false,
+        start:"top -10%",
+        end:"top -11%",
+        scrub:1
+    }   
+})
+gsap.to("#main",{
+    backgroundColor: "#000",
+    scrollTrigger:{
+        trigger:"#main",
+        scroller:"body",
+        markers:false,
+        start:"top -25%",
+        end:"top -70%",
+        scrub:2
+
+    }
+
+})
+gsap.from("#about-us img,#about-us-in",{
+    y:90,
+    opacity:0,
+    duration:1,
+    stagger:0.4,
+    scrollTrigger:{
+        trigger:"#about-us",
+        scroller:"body",
+        start:"top 60%",
+        end:"top 58%",
+        scrub:2
+    }
+})
+gsap.from(".card",{
+    scale:0.8,
+    opacity:0,
+    duration:1,
+    stagger:0.4,
+    scrollTrigger:{
+        trigger:".card",
+        scroller:"body",
+        start:"top 70%",
+        end:"top 65%",
+        scrub:2
+    }
+})
+gsap.from("#colon-1",{
+    y:-70,
+    x:-70,
+    scrollTrigger:{
+        trigger:"#colon-1",
+        scroller:"body",
+        markers:false,
+        start:"top 55%",
+        end:"top 45%",
+        scrub:4
+    }
+})
+gsap.from("#colon-2",{
+    y:70,
+    x:70,
+    scrollTrigger:{
+        trigger:"#colon-1",
+        scroller:"body",
+        markers:false,
+        start:"top 55%",
+        end:"top 45%",
+        scrub:4
+    }
+})
+    </script>
+</body>
+</html>

@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #cards-container{
+    
+    height: 80vh;
+    display: flex;
+    align-items: top;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    gap: 70px;
+    position: relative;
+    z-index: 10;
+}
+.card{
+    height: 80%;
+    width: 30%;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    transition: all ease 0.6s;
+}
+#card1{
+    background-image: url('IMG/w1.jpg');
+}
+#card2{
+    background-image: url('IMG/wk1.jpg');
+}
+#card3{
+    background-image: url('IMG/wk2.jpg');
+}
+#card4{
+    background-image: url('IMG/w2.jpg');
+}
+#card5{
+    background-image: url('IMG/w3.jpg');
+}
+#card6{
+    background-image: url('IMG/w4.jpg');
+}
+.over{
+    height: 100%;
+    width: 100%;
+    background-color: #95C11E;
+    padding-left:2px;
+    padding-top: 16px;
+    opacity: 0;
+    transition: all ease 0.6s;
+}
+.over h4{
+    color: black;
+    font-size: 30px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    margin-bottom: 20px;
+    font-weight: 800;
+
+}
+.over p{
+    color: black;
+    font-size: 18px;
+}
+.card:hover .over{
+    opacity: 1;
+}
+
+#cursor{
+    height: 20px;
+    width: 20px;
+    background-color: #95C11E;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 99;
+}
+
+#nav{
+    height: 145px;
+    width: 100%;
+    display: flex;
+    padding: 0 150px;
+    gap: 50px;
+    position:fixed;
+    justify-content: flex-start;
+    z-index: 99;
+    background-color: rgba(0, 0, 0, 0.37);
+}
+#nav img{
+    height: 75px;
+}
+
+#nav h4{
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+#footer{
+    height: 40vh;
+    width: 100%;
+    background:linear-gradient(to left bottom,#b4f502,#92c605);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 150px;
+    padding: 0 100px;
+}
+#footer>img{
+    position: absolute;
+    left: 0;
+    height: 40%;
+    z-index: 0;
+}
+#scroller{
+    
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 10;
+
+}
+#scroller::-webkit-scrollbar{
+    display: none;
+
+}
+#scroller-in{
+    display: inline-block;
+    white-space: nowrap;
+}
+#scroller-in{
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: scroll;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+#scroller h4{
+    display: inline-block;
+    font-size: 140px;
+    font-weight: 800;
+    font-family: gilroy;
+    margin-right: 10px;
+    transition: all linear 0.5s;
+    color: transparent;
+    -webkit-text-stroke: 2px #95C11E;
+}
+#scroller h4:hover{
+    color: #95C11E;
+}
+@keyframes scroll{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+a{
+text-decoration: none;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    align-items: center;
+}
+html,body{
+    height: 100;
+    width: 100;
+}
+#cursor{
+    height: 20px;
+    width: 20px;
+    background-color: #95C11E;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 99;
+}
+#cursor-blur{
+    height: 400px;
+    width: 400px;
+    background-color: #96c11e33;
+    border-radius: 50%;
+    position: fixed;
+    filter: blur(50px);
+    z-index: 9;
+}
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="nav">
+
+        <img src="https://www.jetpunk.com/img/user-photo-library/3a/3a1b007d7b-450.png">
+
+        <h4><a href="/">Home</a></h4>
+        <h4><a href="sports">Sports</a></h4>
+        <h4><a href="diet">Diet</a></h4>
+        <h4><a href="login">Login</a></h4>
+    
+    </div>
+    <div id="cards-container">
+    <div class="card" id="card1">
+            <div class="over">
+                <h4>Day 1: Basics and Stance</h4>
+                <p>
+                    <li>Stance and Balance Drill: Focus on your wicket-keeping stance and balance. Practice squatting down in a balanced position with your weight on the balls of your feet. Work on being ready to move in any direction.</li>
+                    <li>Catching Practice: Have someone throw balls from different angles, focusing on catching techniques. Work on soft hands to receive the ball.</li>
+                    <li>Footwork Drill: Work on quick and precise foot movements. Use cones or markers to simulate the movement of your feet while collecting the ball.</li>
+                    
+                
+                
+                </p>
+            </div>
+        </div>
+        <div class="card" id="card2">
+            <div class="over">
+                <h4>Day 2: Reaction Time and Glove Work</h4>
+                <p>
+                    <li>Reaction Drill: Use a tennis ball or reaction ball to improve your reflexes. Have someone bounce or throw the ball at you, and react quickly to catch it.</li>
+                    <li>Glove Work: Practice catching balls with wicket-keeping gloves. Focus on the correct technique, ensuring that you're using the correct part of the gloves for different types of deliveries.</li>
+                    
+                </p>
+            </div>
+        </div>
+        <div class="card" id="card3">
+            <div class="over">
+                <h4>Day 3: Wicket-keeping to Spinners</h4>
+                <p>
+                    <li>Leg-spin and Off-spin Practice: Work with spin bowlers or use a bowling machine to practice wicket-keeping to spin deliveries. Focus on reading the spin and taking clean catches.</li>
+                    <li>Stumping Practice: Work on your stumping technique. Have a spinner bowl from a distance, and practice collecting the ball and whipping the bails off quickly.</li>
+                    
+                </p><br>
+            </div>
+        </div>
+    </div>
+    <div id="cards-container">
+        <div class="card" id="card4">
+            <div class="over">
+                <h4>Day 4: Wicket-keeping to Pace Bowlers</h4>
+                
+                <p>
+                    <li>Pace Bowling Practice: Practice wicket-keeping to fast bowlers, focusing on catching deliveries at different lengths and speeds.</li>
+                    <li>Chest High Catch Drill: Have a fast bowler bowl chest-high deliveries, and work on taking catches cleanly and safely.</li>
+                    
+                </p>
+            </div>
+        </div>
+        <div class="card" id="card5">
+            <div class="over">
+                <h4>Day 5: Match Simulations and Communication</h4>
+                <p>
+                    <li>Match Simulation: Participate in match simulations or practice games. Focus on your communication with the bowlers and fielders, and practice directing the field placements</li>
+                    <li>Calling Drill: Work on your calling while keeping wickets. Simulate run-out scenarios and practice making quick and accurate calls.</li>
+                    
+                </p>
+            </div>
+        </div>
+        <div class="card" id="card6">
+            <div class="over">
+                <h4>Day 6: Mental Toughness and Conditioning</h4>
+                <p>
+                    <li>Mental Toughness Training: Spend time visualizing different match scenarios and practicing your mental toughness as a wicket-keeper.</li>
+                    <li>Fitness and Agility: Include fitness drills that improve your agility, speed, and endurance. Wicket-keepers need to be agile and quick on their feet.</li>
+                    
+                </p>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+            <img src="https://www.jetpunk.com/img/user-photo-library/3a/3a1b007d7b-450.png">
+            <div id="f1">
+                <img src="https://eiwgew27fhz.exactdn.com/wp-content/themes/puttosaurus/img/dots-side.svg" >
+            </div>
+            <div id="f2">
+                <h3>Sports</h3>
+                <h3>Fitness</h3>
+                <h3>Diet</h3>
+            </div>
+            <div id="f3">
+                <h3>Contact Us</h3>
+                
+            </div>
+            <div id="f4">
+                <h4>
+                    Vidyalankar Polytechnic <br>
+                    Wadala <br>
+                    Mumbai <br>
+                    
+                </h4>
+            </div>
+        </div>
+     <script>
+        var crsr = document.querySelector("#cursor")
+var blur = document.querySelector("#cursor-blur")
+document.addEventListener("mousemove",function(dets){
+crsr.style.left = dets.x+"px"
+crsr.style.top = dets.y+"px"
+blur.style.left = dets.x-250+"px"
+blur.style.top = dets.y-250+"px"
+})
+
+
+var h4all = document.querySelectorAll("#nav h4")
+h4all.forEach(function(elem){
+    elem.addEventListener("mouseenter",function(){
+        crsr.style.scale=3
+        crsr.style.border="1px solid #fff"
+        crsr.style.backgroundColor="transparent"
+    })
+    
+        elem.addEventListener("mouseleave",function(){
+            crsr.style.scale=1
+            crsr.style.border="0px solid #95C11E"
+            crsr.style.backgroundColor="#95C11E"
+        })
+    
+    })
+
+gsap.to("#nav",{
+    backgroundColor:"#000",
+    height:"80px",
+    duration: 0.5,
+    scrollTrigger:{
+        trigger:"#nav",
+        scroller:"body",
+        markers:false,
+        start:"top -10%",
+        end:"top -11%",
+        scrub:1
+    }   
+})
+gsap.to("#main",{
+    backgroundColor: "#000",
+    scrollTrigger:{
+        trigger:"#main",
+        scroller:"body",
+        markers:false,
+        start:"top -25%",
+        end:"top -70%",
+        scrub:2
+
+    }
+
+})
+gsap.from("#about-us img,#about-us-in",{
+    y:90,
+    opacity:0,
+    duration:1,
+    stagger:0.4,
+    scrollTrigger:{
+        trigger:"#about-us",
+        scroller:"body",
+        start:"top 60%",
+        end:"top 58%",
+        scrub:2
+    }
+})
+gsap.from(".card",{
+    scale:0.8,
+    opacity:0,
+    duration:1,
+    stagger:0.4,
+    scrollTrigger:{
+        trigger:".card",
+        scroller:"body",
+        start:"top 70%",
+        end:"top 65%",
+        scrub:2
+    }
+})
+gsap.from("#colon-1",{
+    y:-70,
+    x:-70,
+    scrollTrigger:{
+        trigger:"#colon-1",
+        scroller:"body",
+        markers:false,
+        start:"top 55%",
+        end:"top 45%",
+        scrub:4
+    }
+})
+gsap.from("#colon-2",{
+    y:70,
+    x:70,
+    scrollTrigger:{
+        trigger:"#colon-1",
+        scroller:"body",
+        markers:false,
+        start:"top 55%",
+        end:"top 45%",
+        scrub:4
+    }
+})
+    </script>
+</body>
+</html>

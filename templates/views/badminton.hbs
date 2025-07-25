@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js'></script>
+</head>
+<body>
+     <div id="nav">
+
+        <img src="https://www.jetpunk.com/img/user-photo-library/3a/3a1b007d7b-450.png">
+
+        <h4><a href="/">Home</a></h4>
+        <h4><a href="sports">Sports</a></h4>
+        <h4><a href="diet">Diet</a></h4>
+        <h4><a href="login">Login</a></h4>
+    </div>
+    <h1>in progress....</h1>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('calendar');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+          initialView: 'dayGridMonth'
+        });
+        calendar.render();
+      });
+
+    </script>
+</body>
+</html>

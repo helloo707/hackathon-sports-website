@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+       <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Sansita:ital@1&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Pacifico&family=Playfair+Display:ital,wght@0,400;1,600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+        <script src="https://kit.fontawesome.com/fbacc3b184.js" crossorigin="anonymous"></script>
+    <title>Sugargem</title>
+    <style>
+
+#nav{
+    height: 145px !important;
+    width: 100% !important;
+    
+    display: flex !important;
+    padding: 0 150px !important;
+    gap: 50px !important;
+    position:fixed !important;
+    justify-content: flex-start !important;
+    z-index: 99 !important;
+
+}
+#nav img{
+    height: 75px !important;
+}
+
+#nav h4{
+    text-transform: uppercase !important;
+    font-weight: 500 !important;
+}
+.hero{
+    height: 100% !important;
+    width: 100% !important;
+    background-color:#000000e6 !important;
+    background-position: center !important;
+    background-size: cover !important;
+    position: absolute !important;
+}
+.form-box{
+    width: 400px;
+    height: 500px;
+    position: relative;
+    margin:20vh auto;
+    background-color:#2d2d2dcc;
+    padding: 5px;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0px 0px 30px 9px rgba(0, 0, 0, 0.78);
+}
+.buttonbox{
+    width: 225px;
+    margin: 35px auto;
+    position: relative;
+    box-shadow: 0px 0px 30px 9px rgba(0, 0, 0, 0.78);
+    border-radius: 20px;
+}
+.toggle-btn{
+    padding: 10px 29px;
+    cursor: pointer;
+    background: transparent;
+    border: 0px;
+    outline: none;
+    position: relative;
+}
+#btnn{
+    top: 0;
+    left: 0;
+    position: absolute !important;
+    width: 110px;
+    height: 100%;
+    background: linear-gradient(to right,#7ea079,#59ba4a);
+    border-radius: 20px;
+    transition: 0.5s;
+    box-shadow: 0px 0px 30px 9px rgba(0, 0, 0, 0.78);
+}
+.social-icons{
+    margin: 15px auto;
+    text-align: center;
+}
+.social-icons img{
+    width: 30px;
+    margin: 0px 13px;
+    box-shadow:0px 0px 8px 1px rgba(34, 34, 34, 0.78);
+    cursor: pointer;
+    border-radius: 10px;
+}
+.input-grp{
+    top: 180px;
+    position: absolute;
+    width: 280px;
+    transition: 0.5s;
+    margin: 10px ;
+}
+.input-field{
+    width: 100%;
+    padding: 10px 0;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    border-bottom: 1px solid rgb(202 118 145 / 78%);
+    outline: none;
+    background: transparent;
+    bottom: 10px;
+}
+.submit-btn{
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: 30px auto;
+    background:linear-gradient(to right,#7ea079,#59ba4a);
+    border: 0;
+    outline:none;
+    border-radius: 20px;
+}
+#scroller h4:hover{
+    color: #95C11E;
+}
+#login{
+    left: 50px;
+}
+#register{
+    left: 450px;
+}
+footer{
+    margin-top: 100vh !important;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    align-items: center;
+}
+html,body{
+    height: 100;
+    width: 100;
+}
+#nav h4 a{
+     text-decoration:none;
+     color: #fff;
+}
+    </style>
+</head>
+<body>
+    <div class="hero">
+     <div id="nav">
+
+        <img src="https://www.jetpunk.com/img/user-photo-library/3a/3a1b007d7b-450.png">
+
+        <h4><a href="/">Home</a></h4>
+        <h4><a href="sports">Sports</a></h4>
+        <h4><a href="diet">Diet</a></h4>
+        <h4><a href="login">Login</a></h4>
+    </div>
+    <div class="form-box">
+      <div class="buttonbox">
+        <div id="btnn"></div>
+        <button type="button" class="toggle-btn" onclick="login()">Log in</button>
+        <button type="button" class="toggle-btn" onclick="register()">Register</button>
+      </div>
+      <form  id="login" action="/login" method="POST" class="input-grp" >
+        <input type="email" name="email" class="input-field" placeholder="Email Id" required>
+        <input type="text" name="password" class="input-field" placeholder="Password" required>
+        <button type="submit" class="submit-btn" value="login">Login </button>
+      </form>
+      <form id="register" action="/register" method="post" class="input-grp"  >
+        <input type="text" name="Name" class="input-field" placeholder="Name">
+        <input type="email" name="email" class="input-field" placeholder="Email id" required>
+        <input type="number" name="phone" class="input-field" placeholder="Phone Number" required>
+        <input type="text" name="password" class="input-field" placeholder="Password" required>
+        <input type="text" name="confirmpassword" class="input-field" placeholder="Confirm Password" required>
+        <button type="submit" class="submit-btn" value="register">Register </button>
+      </form>
+      <div class="social-icons">
+        <img src="/img/instagram.png" alt="">
+        <img src="/img/facebook.png" alt="">
+        <img src="/img/twitter.png" alt="">
+    </div>
+    </div>
+  </div>
+</body>
+<script >
+    let x=document.getElementById("login");
+    let y=document.getElementById("register");
+    let z=document.getElementById("btnn")
+
+    function register(){
+      x.style.left="-400px";
+      y.style.left="50px";
+      z.style.left="110px";
+    }
+    function login(){
+      x.style.left="50px";
+      y.style.left="450px";
+      z.style.left="0px";
+    }
+  </script>
+</html>
